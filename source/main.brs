@@ -1,34 +1,34 @@
 '********** Copyright 2015 Roku Corp.  All Rights Reserved. **********
 
-sub Main()
-	showChannelSGScreen()
-end sub
+SUB Main()
+  showChannelSGScreen()
+END SUB
 
-sub showChannelSGScreen()
-	screen = CreateObject("roSGScreen")
+SUB showChannelSGScreen()
+  screen = CreateObject("roSGScreen")
 
   channelConfig = ParseJson(ReadAsciiFile("pkg:/source/channelConfig.json"))
 
-  print channelConfig
+  PRINT channelConfig
 
   m.global = screen.getGlobalNode()
   m.global.update(channelConfig, true)
 
-	m.port = CreateObject("roMessagePort")
-	screen.setMessagePort(m.port)
-	scene = screen.CreateScene("MainScene")
-	screen.show()
+  m.port = CreateObject("roMessagePort")
+  screen.setMessagePort(m.port)
+  scene = screen.CreateScene("MainScene")
+  screen.show()
 
-	while(true)
+  WHILE(true)
 
-		msg = wait(0, m.port)
-		msgType = type(msg)
+    msg = wait(0, m.port)
+    msgType = type(msg)
 
-		if msgType = "roSGScreenEvent"
+    IF msgType = "roSGScreenEvent"
 
-			if msg.isScreenClosed() then return
+      IF msg.isScreenClosed() THEN RETURN
 
-		end if
+    END IF
 
-	end while
-end sub
+  END WHILE
+END SUB
