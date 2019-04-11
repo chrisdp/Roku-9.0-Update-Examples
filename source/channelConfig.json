@@ -1,0 +1,65 @@
+{
+  "configs": {
+    "subtype": "Node",
+    "Screens": {
+      "subtype": "Node",
+      "MainScene": {
+        "initConfig": {
+          "id": "tutorialScene",
+          "backgroundURI": "pkg:/images/rsgetbg.jpg",
+          "dialog": {
+            "subtype": "ProgressDialog",
+            "backgroundUri": "pkg:/images/sgetdialogbg.9.png",
+            "title": "Loading SubReddits For Roku"
+          },
+          "children": [{
+            "subtype": "RowList",
+            "id": "RedditList",
+            "translation": [100, 40],
+            "itemComponentName": "RowListItem",
+            "numRows": 2,
+            "itemSize": [1608, 308],
+            "rowItemSize": [
+              [536, 308]
+            ],
+            "itemSpacing": [0, 40],
+            "showRowLabel": [true],
+            "showRowCounter": [true],
+            "drawFocusFeedback": false,
+            "vertFocusAnimationStyle": "fixedFocusWrap",
+            "rowFocusAnimationStyle": "fixedFocusWrap"
+          }]
+        }
+      }
+    },
+    "Modules": {
+      "subtype": "Node",
+      "RowListItem": {
+        "initConfig": [{
+          "subType": "Poster",
+          "id": "itemPoster",
+          "translation": [10, 10],
+          "width": 512,
+          "height": 288,
+          "scaleRotateCenter": [256.0, 144.0],
+          "children": [{
+            "subtype": "Rectangle",
+            "id": "itemMask",
+            "color": "#000000FF",
+            "opacity": 0.75,
+            "width": 512,
+            "height": 288,
+            "scaleRotateCenter": [256.0, 144.0]
+          }]
+        }, {
+          "subtype": "Label",
+          "id": "itemLabel",
+          "translation": [20, 20],
+          "width": 492,
+          "height": 248,
+          "wrap": true
+        }]
+      }
+    }
+  }
+}

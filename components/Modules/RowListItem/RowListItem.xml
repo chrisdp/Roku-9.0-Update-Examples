@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="RowListItem" extends="Group">
+  <interface>
+    <field id="itemContent" type="node" onChange="showContent" />
+    <field id="focusPercent" type="float" onChange="showFocus" />
+    <field id="itemHasFocus" type="boolean" onChange="onItemHasFocus" />
+  </interface>
+
+  <script type="text/brightscript" uri="RowListItem.brs" />
+</component>
