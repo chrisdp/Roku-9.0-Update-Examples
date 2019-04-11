@@ -3,7 +3,6 @@ SUB init()
   ' Example of using update to create a children nodes by passing an array
   ' of objects with subtypes and also nested children by leveraging the children field as an array.
   ' The true flag is require when you want to use update to add fields
-  ' That don't exist or create children
   m.top.update(m.global.configs.Modules.RowListItem.initConfig)
 
   ' Here is an example of the object that is being used

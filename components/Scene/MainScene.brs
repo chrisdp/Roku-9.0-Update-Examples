@@ -3,8 +3,8 @@ SUB init()
 
   ' Example of using update like set fields but also creating a node for
   ' the dialog field by leveraging subtype and also creating a child rowList
-  ' buy using both the children key and setting using the addFields param as true.
-  m.top.update(m.global.configs.Screens.MainScene.initConfig, true)
+  ' buy using the children key.
+  m.top.update(m.global.configs.Screens.MainScene.initConfig)
 
   ' Here is an example of the object being used.
   ' {
