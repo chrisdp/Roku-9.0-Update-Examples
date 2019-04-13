@@ -9,8 +9,6 @@ SUB showChannelSGScreen()
 
   channelConfig = ParseJson(ReadAsciiFile("pkg:/source/channelConfig.json"))
 
-  PRINT channelConfig
-
   m.global = screen.getGlobalNode()
   m.global.update(channelConfig, true)
 
@@ -25,10 +23,7 @@ SUB showChannelSGScreen()
     msgType = type(msg)
 
     IF msgType = "roSGScreenEvent"
-
       IF msg.isScreenClosed() THEN RETURN
-
     END IF
-
   END WHILE
 END SUB
