@@ -3,6 +3,11 @@ SUB init()
   m.loaded = false
   m.currentExampleScreen = INVALID
 
+  IF true = CreateObject("roAppInfo").isDev()
+    ' Roku Advanced Layout Editor Support
+    m.top.createChild("TrackerTask")
+  END IF
+
   ' Example of using update like set fields but also creating a node for
   ' the dialog field by leveraging subtype and also creating a child rowList
   ' buy using the children key.
