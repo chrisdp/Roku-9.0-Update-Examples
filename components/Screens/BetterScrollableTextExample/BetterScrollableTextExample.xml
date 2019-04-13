@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<component name="BetterScrollableTextExample" extends="Group">
+  <script type="text/brightscript" uri="BetterScrollableTextExample.brs" />
+
+  <children>
+    <BetterScrollableText id="scrollableText" />
+  </children>
+</component>

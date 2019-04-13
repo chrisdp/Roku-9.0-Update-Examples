@@ -13,21 +13,44 @@
             "title": "Loading SubReddits For Roku"
           },
           "children": [{
-            "subtype": "RowList",
-            "id": "RedditList",
-            "translation": [100, 40],
-            "itemComponentName": "RowListItem",
-            "numRows": 2,
-            "itemSize": [1608, 308],
-            "rowItemSize": [
-              [536, 308]
-            ],
-            "itemSpacing": [0, 40],
-            "showRowLabel": [true],
-            "showRowCounter": [true],
-            "drawFocusFeedback": false,
-            "vertFocusAnimationStyle": "fixedFocusWrap",
-            "rowFocusAnimationStyle": "fixedFocusWrap"
+            "subtype": "Group",
+            "id": "MainView",
+            "children": [{
+              "subtype": "RowList",
+              "id": "RedditList",
+              "translation": [100, 40],
+              "itemComponentName": "RowListItem",
+              "numRows": 2,
+              "itemSize": [1608, 308],
+              "rowItemSize": [
+                [536, 308]
+              ],
+              "itemSpacing": [0, 40],
+              "showRowLabel": [true],
+              "showRowCounter": [true],
+              "drawFocusFeedback": false,
+              "vertFocusAnimationStyle": "floatingFocus",
+              "rowFocusAnimationStyle": "fixedFocusWrap"
+            }, {
+              "subtype": "LabelList",
+              "id": "ExampleList",
+              "translation": [100, 750],
+              "numRows": 5,
+              "itemSize": [1608, 50],
+              "itemSpacing": [0, 10],
+              "vertFocusAnimationStyle": "floatingFocus",
+              "visible": false,
+              "content": {
+                "subtype": "ContentNode",
+                "children": [{
+                  "subtype": "ContentNode",
+                  "title": "Video Example"
+                }, {
+                  "subtype": "ContentNode",
+                  "title": "Better Scrollable Text Example"
+                }]
+              }
+            }]
           }]
         }
       }
