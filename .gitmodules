@@ -1,0 +1,3 @@
+[submodule "components/Modules/Roku-BetterScrollableText"]
+	path = components/Modules/Roku-BetterScrollableText
+	url = https://github.com/chrisdp/Roku-BetterScrollableText.git
